@@ -1,0 +1,39 @@
+*** Settings ***
+Library           String
+Library           SeleniumLibrary
+Library           ExcelRobot
+
+*** Variables ***
+${Password}       //*[@id="passwd"]
+${login_link}     //*[@id="header"]/div[2]/div/div/nav/div[1]/a
+${Email}          //*[@id="email"]
+${login_button}    //*[@id="SubmitLogin"]/span
+${logout_link}    //*[@id="header"]/div[2]/div/div/nav/div[2]/a
+${t-shirt button}    //*[@id="block_top_menu"]/ul/li[3]/a
+${PLP }           //*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]/span
+${more button}    //*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[2]/span
+${add to cart button}    //*[@id="add_to_cart"]/button/span
+${click proceed to checkout}    //*[@id="layer_cart"]/div[1]/div[2]/div[4]/a/span/i
+${click proceed to checkout2}    //*[@id="center_column"]/p[2]/a[1]/span
+${click proceed to checkout3}    //*[@id="center_column"]/form/p/button/span
+${select checkbox}    //*[@id="cgv"]
+${click proceed4}    //*[@id="form"]/p/button/span/i
+${click bank button}    //*[@id="HOOK_PAYMENT"]/div[1]/div/p/a
+${click on confirm button}    //*[@id="cart_navigation"]/button/span/i
+${Url}            http://automationpractice.com/index.php
+${Browser}        Chrome
+${google}         https://www.google.com/
+${sign in button}    //*[@id="header"]/div[2]/div/div/nav/div[1]/a
+${newACC}         //*[@id="email_create"]
+${CreateAnACCbutton}    //*[@id="SubmitCreate"]/span
+${Mrs-gender}     //*[@id="id_gender2"]
+${firstname}      //*[@id="customer_firstname"]
+${lastname}       //*[@id="customer_lastname"]
+${PasswordNewAcc}    //*[@id="passwd"]
+${Address}        //*[@id="address1"]
+${City}           //*[@id="city"]
+${random_string}    //*[@id="email_create"]
+${state}          //*[@id="id_state"]
+${postalcode}     //*[@id="postcode"]
+${phonenubmer}    //*[@id="phone"]
+HelloWorld

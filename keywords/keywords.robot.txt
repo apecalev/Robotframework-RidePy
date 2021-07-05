@@ -1,0 +1,51 @@
+*** Settings ***
+Library           String
+Library           SeleniumLibrary
+Resource          ../locators/locators.robot.txt
+
+*** Keywords ***
+Open Website
+    Open Browser    ${Url}    ${Browser}
+
+Log In Form
+    Wait Until Element Is Visible    ${login_link}    #login link
+    Click Element    ${login_link}
+    Wait Until Element Is Visible    ${Email}
+    Input Text    ${Email}    atest@test.com
+    Input Text    ${Password}    Test97
+    Click Element    ${login_button}    #login button
+    Wait Until Element Is Visible    ${logout_link}    #logout link
+
+Payment Methods
+    Wait Until Element is Visible    ${add to cart button}    #wait until add to cart is visible
+    Click Element    ${add to cart button}    #add to cart button
+    Wait Until Element Is Visible    ${click proceed to checkout}    #proceed to checkout visible
+    Click Element    ${click proceed to checkout}    #click proceed to checkout
+    Wait Until Element Is Visible    ${click proceed to checkout2}    #proceed to checkout visible
+    Click Element    ${click proceed to checkout2}    #click proceed to checkout
+    Wait Until Element Is Visible    ${click proceed to checkout3}    #proceed to checkout visible
+    Click Element    ${click proceed to checkout3}    #click proceed to checkout
+    Page Should Contain Checkbox    ${select checkbox}    #wait until checkbox is visible
+    Select Checkbox    ${select checkbox}    #select checkbox
+    Click Element    ${click proceed4}    #click proceed
+    Wait Until Element Is Visible    ${click bank button}    #wait until bank button is visible
+    Click Element    ${click bank button}    #click bank button
+
+Open Google
+    Open Browser    ${google}    ${Browser}
+
+NewAccount
+    Click Element    ${sign in button}    #sign in button
+    Input Text    ${newACC}    Tim123@gmail.com
+    Click Element    ${CreateAnACCbutton}    #CreateAnAcc
+    Wait Until Element Is Visible    ${Mrs-gender}
+    Click Button    ${Mrs-gender}
+    Input Text    ${firstname}    Aleksandar
+    Input Text    ${lastname}    Pechalev
+    Input Text    ${PasswordNewAcc}    123456789
+    Input Text    ${Address}    Ul.petka
+    Input Text    ${City}    Bitola
+    Select From List By Value    ${state}    Alaska
+    Input Text    ${postalcode}    70000
+    Input Text    ${phonenubmer}    07711223344
+    Click Button    //*[@id="submitAccount"]/span
